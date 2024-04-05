@@ -157,7 +157,11 @@ Place-Info
   display: flex;
   flex-direction: row;
   padding: 1rem; 
+}
 
+.place-img { 
+  max-width: 500px; 
+  height: auto;
 }
 
 .place-card-body { padding: 1rem; }
