@@ -1,27 +1,32 @@
+/*------------
+Config general
+------------*/
+
 * {
   box-sizing: border-box;
   margin : 0;
 }
 
 a { text-decoration: none; }
+a:visited { color: transparent;}
+
 li { list-style-type: none; }
 
+img {
+  
+  max-width: 100%;
+  height: auto; 
+}
+
 main {
-  //Posicionamiento
-  //Modelo de caja
   display: flex;
   flex-direction: column;
-
-  //Tipografía
   font-family: $font-family-sans-serif;
   color: $font-color-dark;
-
-  //Visual55555555555555555555555555
   background-color: $background;
 }
 
 header {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,44 +34,107 @@ header {
   padding: 1rem;
 
   background-color: $contrast-color;
-  color: $font-color-ligth;
+}
+
+footer {
+  padding: 2rem;
+  background-color: $contrast-color;
+}
+
+
+
+
+
+/*------------
+Common 
+------------*/
+
+.contrast { color : $contrast-color; }
+.contrast-hover:hover { color : $contrast-color-hover}
+.ligth-color { color: $font-color-ligth;}
+.sherif { font-family: $font-family-serif; }
+
+.margins-v {
+  margin-top:    3rem;
+  margin-bottom: 3rem;
+}
+
+.shadow { box-shadow: 4px 4px 10px $medium-contrast-color;}
+
+.body-container {
+  width: 60%;
+  margin-right:  auto;
+  margin-bottom: 5rem;
+  margin-left:   auto;
+}
+
+.logo {
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+.header-nav {
+  gap: 1rem;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.gap-1 { gap: 1rem;}
+.gap-3 { gap: 3rem;}
+
+
+
+
+
+/*------------
+Main page 
+------------*/
+
+.title {
+  padding: .5rem;
+  margin-top:    15vh;
+  margin-bottom: 15vh;
+  font-size: 3.5rem;
+  text-align: center;
+  text-shadow: 2px 4px 8px $soft-contrast-color;
+}
+
+.second-title { font-size: 2.5rem;}
+.place-title {  font-size: 2rem; }
+
+.title-background {
+  background-image: $cover-image;
+  background-position: center 40%;
+  background-size: cover;
 }
 
 .introduction {
-  line-height: 1.5rem;
   font-size: 1.2rem;
-}
-.contrast { color : $contrast-color; }
-.sherif { font-family: $font-family-serif; }
-
-.title {
-
-  margin-top: 15vh;
-  margin-bottom: 15vh;
-  
-  text-align: center;
-  font-size: 3.5rem;
-  text-shadow: 3px 4px 8px rgba(255, 255, 255, 0.3);
-}
-
-.second-title {
-
-  font-size: 2.5rem;
+  line-height: 1.5rem;
 }
 
 
-.title-background {
-  
-  margin-bottom: 5rem;
 
-  background-image: url('../images/cover.jpg');
-  background-position: center 40%;
 
+
+/*------------
+Place-Info
+------------*/
+
+.place-card { padding: 1rem; }
+
+.divider{
+  align-self: center;
+  width: 90%;
+  color: $soft-contrast-color
 }
 
-.body-container {
-
-  width: 60%;
-  margin: 0 auto;
-
-}
+.place-card-body { padding: 1rem; }
