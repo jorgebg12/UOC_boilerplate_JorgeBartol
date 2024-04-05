@@ -30,7 +30,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
+  height: fit-content;
   padding: 1rem;
 
   background-color: $contrast-color;
@@ -39,6 +39,13 @@ header {
 footer {
   padding: 2rem;
   background-color: $contrast-color;
+}
+
+@media screen and (max-width: 450px) {
+
+  * {
+    font-size: 0.9rem;
+  }
 }
 
 
@@ -61,20 +68,10 @@ Common
 
 .shadow { box-shadow: 4px 4px 10px $medium-contrast-color;}
 
-.body-container {
-  width: 60%;
-  margin-right:  auto;
-  margin-bottom: 5rem;
-  margin-left:   auto;
-}
 
 .logo {
   margin-left: 3rem;
   font-size: 2rem;
-}
-
-.header-nav {
-  gap: 1rem;
 }
 
 .flex-col{
@@ -89,6 +86,27 @@ Common
 
 .gap-1 { gap: 1rem;}
 .gap-3 { gap: 3rem;}
+
+
+.body-container {
+  width: 60%;
+  margin-right:  auto;
+  margin-bottom: 5rem;
+  margin-left:   auto;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .header-nav { flex-direction: column; }
+  .body-container { width: 90%; }
+
+}
 
 
 
@@ -129,12 +147,22 @@ Main page
 Place-Info
 ------------*/
 
-.place-card { padding: 1rem; }
-
 .divider{
   align-self: center;
   width: 90%;
   color: $soft-contrast-color
 }
 
+.place-card { 
+  display: flex;
+  flex-direction: row;
+  padding: 1rem; 
+
+}
+
 .place-card-body { padding: 1rem; }
+
+@media screen and (max-width: 992px) {
+
+  .place-card {  flex-direction: column; }
+}
